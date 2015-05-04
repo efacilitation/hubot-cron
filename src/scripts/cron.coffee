@@ -79,6 +79,7 @@ difference = (obj1, obj2) ->
 
 module.exports = (robot) ->
   robot.brain.data.cronjob or= {}
+  syncJobs robot
   robot.brain.on 'loaded', =>
     syncJobs robot
 
